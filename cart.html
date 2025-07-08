@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Your Cart - Sukray</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Your Cart - Sukray Chocolates</title>
+<link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
 </head>
-<body>
-
+<body onload="renderCart()">
 <header>
+  <img src="logo.png" class="logo">
   <h1>Your Cart</h1>
 </header>
-
-<section>
-  <ul id="cart-items"></ul>
-  <p id="total"></p>
-</section>
-
-<script src="main.js"></script>
-<script>
-  renderCart();
-</script>
-
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="cart.html">Cart</a>
+</nav>
+<main>
+  <div id="cart"></div>
+</main>
 </body>
 </html>
+
