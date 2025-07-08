@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Tahini Chocolate - Sukray</title>
-<link rel="stylesheet" href="../css/style.css">
+<title>Tahini Chocolate - Sukray Chocolates</title>
+<link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
 </head>
 <body>
-
 <header>
+  <img src="logo.png" class="logo">
   <h1>Tahini Chocolate</h1>
 </header>
-
-<section class="product-detail">
-  <img src="../images/tahini.jpg" alt="Tahini Chocolate" width="300">
-  <h2>₹ 350</h2>
-  <p>Rich and creamy tahini-infused premium chocolate, with a unique nutty flavor in every bite.</p>
-  <button onclick="addToCart('Tahini Chocolate', 350)">Add to Cart</button>
-</section>
-
-<script src="main.js"></script>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="cart.html">Cart</a>
+</nav>
+<main>
+  <div class="product-detail">
+    <img src="tahini.jpg" alt="Tahini Chocolate">
+    <p>Price: ₹350</p>
+    <button onclick="addToCart('Tahini Chocolate', 350)">Add to Cart</button>
+  </div>
+</main>
 </body>
 </html>
+
