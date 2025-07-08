@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Coconut Delight - Sukray</title>
-<link rel="stylesheet" href="../css/style.css">
+<title>Coconut Delight - Sukray Chocolates</title>
+<link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
 </head>
 <body>
-
 <header>
+  <img src="logo.png" class="logo">
   <h1>Coconut Delight</h1>
 </header>
-
-<section class="product-detail">
-  <img src="../images/coconut.jpg" alt="Coconut Delight" width="300">
-  <h2>₹ 350</h2>
-  <p>Premium dark chocolate bar layered with soft, creamy coconut filling — an exotic tropical delight.</p>
-  <button onclick="addToCart('Coconut Delight', 350)">Add to Cart</button>
-</section>
-
-<script src="main.js"></script>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="cart.html">Cart</a>
+</nav>
+<main>
+  <div class="product-detail">
+    <img src="coconut.jpg" alt="Tahini Chocolate">
+    <p>Price: ₹350</p>
+    <button onclick="addToCart('Tahini Chocolate', 350)">Add to Cart</button>
+  </div>
+</main>
 </body>
 </html>
+
