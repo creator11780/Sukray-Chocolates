@@ -1,37 +1,38 @@
+let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
 function addToCart(name, price) {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const existing = cart.find(item => item.name === name);
-
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({ name, price, quantity: 1 });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
+  cart.push({name, price});
+  localStorage.setItem('cart', JSON.stringify(cart));
   alert(`${name} added to cart!`);
 }
 
 function renderCart() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const container = document.getElementById("cart-items");
-  const totalElement = document.getElementById("total");
-  container.innerHTML = "";
-  let total = 0;
-
+  const cartDiv = document.getElementById('cart');
+  cartDiv.innerHTML = '';
   if (cart.length === 0) {
-    container.innerHTML = "<p>Your cart is empty.</p>";
-    totalElement.textContent = "";
+    cartDiv.innerHTML = '<p>Your cart is empty.</p>';
     return;
   }
 
-  cart.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = `${item.name} — ₹${item.price} × ${item.quantity}`;
-    container.appendChild(li);
-    total += item.price * item.quantity;
+  let total = 0;
+  cart.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.innerHTML = `
+      ${item.name} - ₹${item.price}
+      <button onclick="removeFromCart(${index})">Remove</button>
+    `;
+    cartDiv.appendChild(div);
+    total += item.price;
   });
-
-  totalElement.textContent = `Total: ₹${total}`;
+  const totalDiv = document.createElement('div');
+  totalDiv.innerHTML = `<strong>Total: ₹${total}</strong>`;
+  cartDiv.appendChild(totalDiv);
 }
+
+function removeFromCart(index) {
+  cart.splice(index,1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
+}
+
