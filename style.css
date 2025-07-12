@@ -18,6 +18,31 @@ header {
   flex-wrap: wrap;
 }
 
+.logo-tagline {
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  mix-blend-mode: multiply;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #5a4032;
+  margin-top: 8px;
+}
+
+.choco-drip {
+  width: 80px;
+  height: auto;
+}
+
+.choco-drip.right {
+  transform: scaleX(-1);
+}
+
+
 
 .logo {
   width: 200px;
