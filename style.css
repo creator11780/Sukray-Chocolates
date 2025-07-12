@@ -1,99 +1,96 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #fdf6ee; /* cream */
-    color: #3e2c23;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f3eb;
+  color: #333;
 }
 
 header {
-    text-align: center;
-    padding: 10px;
-    background-color: #fdf6ee;
+  background-color: #f9f3eb;
+  text-align: center;
+  padding: 20px 10px;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
-    height: 80px;
-}
-
-.choco-img {
-    height: 80px;
+  width: 150px;
+  mix-blend-mode: multiply; /* This helps the logo merge with background */
 }
 
 .tagline {
-    font-size: 1.2em;
-    margin: 0;
+  font-size: 1.5rem;
+  color: #5a4032;
+}
+
+.choco-image {
+  width: 120px;
+  margin-top: 10px;
 }
 
 nav {
-    background-color: #c4b092;
-    padding: 10px;
-    text-align: center;
+  background-color: #bfa98a;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
 }
 
 nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.promo {
-    background-color: #6b4f3b; /* rich brown */
-    color: white;
-    text-align: center;
-    padding: 20px;
+.banner {
+  background-color: #6b4b3e;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
 }
 
-.promo button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: white;
-    color: #6b4f3b;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+.banner button {
+  background-color: #f9f3eb;
+  color: #6b4b3e;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .products {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
 .product {
-    background: white;
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: 200px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: white;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 20px;
+  width: 200px;
 }
 
 .product img {
-    width: 100%;
-    height: auto;
+  max-width: 100%;
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f3eb;
+  font-size: 0.9rem;
+  color: #666;
 }
+
 
 
 
