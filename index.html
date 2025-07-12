@@ -2,59 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sukray Chocolates - Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sukray Chocolates</title>
 <link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
 </head>
 <body>
-
 <header>
     <div class="logo-container">
-        <img src="logo.png" alt="Sukray Logo" class="logo">
+        <img src="logo.png" alt="Logo" class="logo">
         <h1>Sukray Chocolates</h1>
-        <p class="tagline">Taste That Transcends</p>
+        <img src="premium-chocolate.jpg" alt="Premium Chocolate" class="choco-img">
     </div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="cart.html">Cart</a>
-    </nav>
+    <p class="tagline">Taste That Transcends</p>
 </header>
 
-<section class="shop-now">
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="cart.html">Cart</a>
+</nav>
+
+<section class="promo">
     <h2>15% OFF YOUR FIRST ORDER</h2>
     <button>Shop Now</button>
 </section>
 
-<main>
-    <section class="products">
-        <div class="product-card">
-            <img src="tahini.jpg" alt="Tahini Chocolate">
-            <h3>Tahini Chocolate</h3>
-            <p>₹350</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="coconut.jpg" alt="Coconut Delight">
-            <h3>Coconut Delight</h3>
-            <p>₹350</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product-card">
-            <img src="caramel.jpg" alt="Caramel Crunch">
-            <h3>Caramel Crunch</h3>
-            <p>₹350</p>
-            <button>Add to Cart</button>
-        </div>
-    </section>
+<main class="products">
+    <div class="product" onclick="viewProduct('Tahini Chocolate', 350)">
+        <img src="tahini.jpg" alt="Tahini Chocolate">
+        <h3>Tahini Chocolate</h3>
+        <p>₹350</p>
+        <button onclick="addToCart('Tahini Chocolate', 350); event.stopPropagation();">Add to Cart</button>
+    </div>
+    <div class="product" onclick="viewProduct('Coconut Delight', 350)">
+        <img src="coconut.jpg" alt="Coconut Delight">
+        <h3>Coconut Delight</h3>
+        <p>₹350</p>
+        <button onclick="addToCart('Coconut Delight', 350); event.stopPropagation();">Add to Cart</button>
+    </div>
+    <div class="product" onclick="viewProduct('Caramel Crunch', 350)">
+        <img src="caramel.jpg" alt="Caramel Crunch">
+        <h3>Caramel Crunch</h3>
+        <p>₹350</p>
+        <button onclick="addToCart('Caramel Crunch', 350); event.stopPropagation();">Add to Cart</button>
+    </div>
 </main>
 
 <footer>
     &copy; 2025 Sukray Chocolates. All rights reserved.
 </footer>
-
 </body>
 </html>
+
 
 
 
