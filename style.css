@@ -3,6 +3,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f3eb;
   color: #333;
+   position: relative;
 }
 
 header {
@@ -33,13 +34,21 @@ header {
   margin-top: 8px;
 }
 
-.choco-drip {
-  width: 80px;
+.choco-drip.corner {
+  position: absolute;
+  top: 0;
+  width: 100px;
   height: auto;
+  z-index: 10;
 }
 
-.choco-drip.right {
-  transform: scaleX(-1);
+.choco-drip.corner.left {
+  left: 0;
+}
+
+.choco-drip.corner.right {
+  right: 0;
+  transform: scaleX(-1); /* Flip horizontally */
 }
 
 
