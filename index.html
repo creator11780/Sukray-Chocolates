@@ -7,18 +7,16 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-<img src="choco-drip-left.png" alt="Chocolate Drip Left" class="choco-drip corner left">
-<img src="choco-drip-right.png" alt="Chocolate Drip Right" class="choco-drip corner right">
 
-  <header>
-    <div class="header-content">
-      <div class="logo-tagline">
-        <img src="logo.png" alt="Sukray Logo" class="logo">
-        <div class="tagline">TASTE THAT TRANSCENDS</div>
-      </div>
-    </div>
-  </header>
+<div class="drips">
+  <img src="choco-drip-left.png" alt="Chocolate Drip Left" class="choco-drip left">
+  <img src="logo.png" alt="Sukray Logo" class="logo">
+  <img src="choco-drip-right.png" alt="Chocolate Drip Right" class="choco-drip right">
+</div>
 
+<header>
+  <div class="tagline">TASTE THAT TRANSCENDS</div>
+</header>
 
 <nav>
   <a href="index.html">Home</a>
@@ -33,24 +31,24 @@
 </section>
 
 <main class="products">
-  <div class="product">
+  <a href="tahini.html" class="product">
     <img src="tahini.jpg" alt="Tahini Chocolate">
     <h3>Tahini Chocolate</h3>
     <p>₹350</p>
-    <button>Add to Cart</button>
-  </div>
-  <div class="product">
+    <button onclick="addToCart('Tahini Chocolate', 350); event.stopPropagation()">Add to Cart</button>
+  </a>
+  <a href="coconut.html" class="product">
     <img src="coconut.jpg" alt="Coconut Delight">
     <h3>Coconut Delight</h3>
     <p>₹350</p>
-    <button>Add to Cart</button>
-  </div>
-  <div class="product">
+    <button onclick="addToCart('Coconut Delight', 350); event.stopPropagation()">Add to Cart</button>
+  </a>
+  <a href="caramel.html" class="product">
     <img src="caramel.jpg" alt="Caramel Brownie">
     <h3>Caramel Brownie</h3>
     <p>₹350</p>
-    <button>Add to Cart</button>
-  </div>
+    <button onclick="addToCart('Caramel Brownie', 350); event.stopPropagation()">Add to Cart</button>
+  </a>
 </main>
 
 <footer>
