@@ -8,11 +8,6 @@ function addToCart(name, price) {
     alert(`${name} added to cart!`);
 }
 
-// Optional: View product (just an alert or redirect if needed)
-function viewProduct(name, price) {
-    alert(`You selected ${name}. Price: ₹${price}`);
-}
-
 // Render cart if on cart page
 document.addEventListener("DOMContentLoaded", () => {
     const cartContainer = document.getElementById("cart-items");
@@ -49,4 +44,5 @@ function removeFromCart(index) {
     localStorage.setItem('cart', JSON.stringify(cart));
     location.reload(); // re-render
 }
+
 
